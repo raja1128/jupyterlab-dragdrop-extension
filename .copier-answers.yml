@@ -1,0 +1,14 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: v4.3.6
+_src_path: https://github.com/jupyterlab/extension-template
+author_email: velagapudiraja@gmail.com
+author_name: Raja Velagapudi
+has_binder: false
+has_settings: false
+kind: frontend
+labextension_name: jt-dragdrop-ext
+project_short_description: A JupyterLab extension.
+python_name: jt_dragdrop_ext
+repository: ''
+test: false
+
