@@ -7,9 +7,9 @@ node_modules/
 *.egg-info/
 .ipynb_checkpoints
 *.tsbuildinfo
-jt_dragdrop_ext/labextension
+# jt_dragdrop_ext/labextension
 # Version file is handled by hatchling
-jt_dragdrop_ext/_version.py
+# jt_dragdrop_ext/_version.py
 
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python

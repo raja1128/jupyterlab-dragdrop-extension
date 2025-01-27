@@ -1,0 +1,74 @@
+"use strict";
+(self["webpackChunkjt_dragdrop_ext"] = self["webpackChunkjt_dragdrop_ext"] || []).push([["lib_index_js"],{
+
+/***/ "./lib/index.js":
+/*!**********************!*\
+  !*** ./lib/index.js ***!
+  \**********************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _jupyterlab_filebrowser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @jupyterlab/filebrowser */ "webpack/sharing/consume/default/@jupyterlab/filebrowser");
+/* harmony import */ var _jupyterlab_filebrowser__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_jupyterlab_filebrowser__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _jupyterlab_notebook__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @jupyterlab/notebook */ "webpack/sharing/consume/default/@jupyterlab/notebook");
+/* harmony import */ var _jupyterlab_notebook__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_jupyterlab_notebook__WEBPACK_IMPORTED_MODULE_1__);
+
+
+/**
+ * Initialization data for the disable-drag-and-drop extension.
+ */
+const plugin = {
+    id: 'jt-dragdrop-ext:plugin',
+    autoStart: true,
+    requires: [_jupyterlab_filebrowser__WEBPACK_IMPORTED_MODULE_0__.IDefaultFileBrowser, _jupyterlab_notebook__WEBPACK_IMPORTED_MODULE_1__.INotebookTracker],
+    // requires: [IFileBrowserFactory],
+    activate: (app, browser, notebookTracker) => {
+        console.log('Disabling drag-and-drop in File Browser.');
+        // Disable drag-and-drop globally (optional)
+        document.addEventListener('dragstart', (event) => {
+            event.preventDefault();
+        });
+        document.addEventListener('drop', (event) => {
+            event.preventDefault();
+        });
+        // Disable drag-and-drop in Notebook cells
+        notebookTracker.widgetAdded.connect((_, panel) => {
+            const notebook = panel.content.node;
+            notebook.addEventListener('dragstart', (event) => {
+                console.log('Drag event prevented in Notebook');
+                event.preventDefault();
+            });
+            notebook.addEventListener('drop', (event) => {
+                console.log('Drop event prevented in Notebook');
+                event.preventDefault();
+            });
+        });
+        // Access the file browser widget
+        const fileBrowser = browser;
+        // Add event listeners to disable drag and drop
+        // fileBrowser.node.addEventListener('dragstart', (event) => {
+        //   console.log('Drag event prevented.');
+        //   event.preventDefault();
+        //   event.stopPropagation();
+        // });
+        fileBrowser.node.addEventListener('drop', (event) => {
+            console.log('Drop event prevented.');
+            event.preventDefault();
+            event.stopPropagation();
+        }, true);
+        // fileBrowser.node.addEventListener('mousedown', (event) => {
+        //   console.log('Mousedown event prevented.');
+        //   event.preventDefault();
+        // });
+    }
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (plugin);
+
+
+/***/ })
+
+}]);
+//# sourceMappingURL=lib_index_js.3a00ac29b5b6efc787b8.js.map
