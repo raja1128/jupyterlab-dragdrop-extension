@@ -4,7 +4,7 @@ import { IDefaultFileBrowser } from '@jupyterlab/filebrowser';
  * Initialization data for the disable-drag-and-drop extension.
  */
 const plugin: JupyterFrontEndPlugin<void> = {
-  id: 'jt-dragdrop-ext:plugin',
+  id: 'jtlab-dragdrop-ext:plugin',
   autoStart: true,
   requires: [IDefaultFileBrowser],
   // requires: [IFileBrowserFactory],

@@ -1,5 +1,5 @@
 {
-    "name": "jt-dragdrop-ext",
+    "name": "jtlab-dragdrop-ext",
     "version": "0.1.0",
     "description": "A JupyterLab extension.",
     "keywords": [
@@ -38,7 +38,7 @@
         "clean": "jlpm clean:lib",
         "clean:lib": "rimraf lib tsconfig.tsbuildinfo",
         "clean:lintcache": "rimraf .eslintcache .stylelintcache",
-        "clean:labextension": "rimraf jt_dragdrop_ext/labextension jt_dragdrop_ext/_version.py",
+        "clean:labextension": "rimraf jtlab_dragdrop_ext/labextension jtlab_dragdrop_ext/_version.py",
         "clean:all": "jlpm clean:lib && jlpm clean:labextension && jlpm clean:lintcache",
         "eslint": "jlpm eslint:check --fix",
         "eslint:check": "eslint . --cache --ext .ts,.tsx",
@@ -92,7 +92,7 @@
     },
     "jupyterlab": {
         "extension": true,
-        "outputDir": "jt_dragdrop_ext/labextension"
+        "outputDir": "jtlab_dragdrop_ext/labextension"
     },
     "eslintIgnore": [
         "node_modules",

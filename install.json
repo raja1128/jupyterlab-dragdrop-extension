@@ -1,5 +1,5 @@
 {
   "packageManager": "python",
-  "packageName": "jt_dragdrop_ext",
-  "uninstallInstructions": "Use your Python package manager (pip, conda, etc.) to uninstall the package jt_dragdrop_ext"
+  "packageName": "jtlab_dragdrop_ext",
+  "uninstallInstructions": "Use your Python package manager (pip, conda, etc.) to uninstall the package jtlab_dragdrop_ext"
 }

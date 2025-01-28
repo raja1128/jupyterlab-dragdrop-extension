@@ -6,9 +6,9 @@ author_name: Raja Velagapudi
 has_binder: false
 has_settings: false
 kind: frontend
-labextension_name: jt-dragdrop-ext
+labextension_name: jtlab-dragdrop-ext
 project_short_description: A JupyterLab extension.
-python_name: jt_dragdrop_ext
+python_name: jtlab_dragdrop_ext
 repository: ''
 test: false
 

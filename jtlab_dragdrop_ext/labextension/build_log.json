@@ -102,7 +102,7 @@
     "output": {
       "hashFunction": "sha256",
       "filename": "[name].[contenthash].js",
-      "path": "/Users/raja/jupyter-lab-ext/jupyterlab-dragdrop-extension/jt_dragdrop_ext/labextension/static",
+      "path": "/Users/raja/jupyter-lab-ext/jupyterlab-dragdrop-extension/jtlab_dragdrop_ext/labextension/static",
       "publicPath": "auto"
     },
     "plugins": [
@@ -113,12 +113,12 @@
       },
       {
         "_options": {
-          "name": "jt-dragdrop-ext",
+          "name": "jtlab-dragdrop-ext",
           "library": {
             "type": "var",
             "name": [
               "_JUPYTERLAB",
-              "jt-dragdrop-ext"
+              "jtlab-dragdrop-ext"
             ]
           },
           "filename": "remoteEntry.[contenthash].js",
@@ -699,7 +699,7 @@
               "import": false,
               "singleton": true
             },
-            "jt-dragdrop-ext": {
+            "jtlab-dragdrop-ext": {
               "version": "0.1.0",
               "singleton": true,
               "import": "/Users/raja/jupyter-lab-ext/jupyterlab-dragdrop-extension/lib/index.js"

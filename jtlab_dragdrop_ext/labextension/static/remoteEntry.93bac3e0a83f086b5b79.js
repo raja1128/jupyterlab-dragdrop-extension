@@ -3,7 +3,7 @@ var _JUPYTERLAB;
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "webpack/container/entry/jt-dragdrop-ext":
+/***/ "webpack/container/entry/jtlab-dragdrop-ext":
 /*!***********************!*\
   !*** container entry ***!
   \***********************/
@@ -124,7 +124,7 @@ __webpack_require__.d(exports, {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"lib_index_js":"3a00ac29b5b6efc787b8","style_index_js":"0dd3e28a9706b5cb468f"}[chunkId] + ".js";
+/******/ 			return "" + chunkId + "." + {"lib_index_js":"a60d64ee1f125602123f","style_index_js":"f16b17e53a4d852b3c06"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -148,7 +148,7 @@ __webpack_require__.d(exports, {
 /******/ 	/* webpack/runtime/load script */
 /******/ 	(() => {
 /******/ 		var inProgress = {};
-/******/ 		var dataWebpackPrefix = "jt-dragdrop-ext:";
+/******/ 		var dataWebpackPrefix = "jtlab-dragdrop-ext:";
 /******/ 		// loadScript function to load a script via script tag
 /******/ 		__webpack_require__.l = (url, done, key, chunkId) => {
 /******/ 			if(inProgress[url]) { inProgress[url].push(done); return; }
@@ -223,7 +223,7 @@ __webpack_require__.d(exports, {
 /******/ 			var warn = (msg) => {
 /******/ 				if (typeof console !== "undefined" && console.warn) console.warn(msg);
 /******/ 			};
-/******/ 			var uniqueName = "jt-dragdrop-ext";
+/******/ 			var uniqueName = "jtlab-dragdrop-ext";
 /******/ 			var register = (name, version, factory, eager) => {
 /******/ 				var versions = scope[name] = scope[name] || {};
 /******/ 				var activeVersion = versions[version];
@@ -243,7 +243,7 @@ __webpack_require__.d(exports, {
 /******/ 			var promises = [];
 /******/ 			switch(name) {
 /******/ 				case "default": {
-/******/ 					register("jt-dragdrop-ext", "0.1.0", () => (__webpack_require__.e("lib_index_js").then(() => (() => (__webpack_require__(/*! ./lib/index.js */ "./lib/index.js"))))));
+/******/ 					register("jtlab-dragdrop-ext", "0.1.0", () => (__webpack_require__.e("lib_index_js").then(() => (() => (__webpack_require__(/*! ./lib/index.js */ "./lib/index.js"))))));
 /******/ 				}
 /******/ 				break;
 /******/ 			}
@@ -400,14 +400,12 @@ __webpack_require__.d(exports, {
 /******/ 		});
 /******/ 		var installedModules = {};
 /******/ 		var moduleToHandlerMapping = {
-/******/ 			"webpack/sharing/consume/default/@jupyterlab/filebrowser": () => (loadSingletonVersion("default", "@jupyterlab/filebrowser", false, [1,4,3,3])),
-/******/ 			"webpack/sharing/consume/default/@jupyterlab/notebook": () => (loadSingletonVersion("default", "@jupyterlab/notebook", false, [1,4,3,3]))
+/******/ 			"webpack/sharing/consume/default/@jupyterlab/filebrowser": () => (loadSingletonVersion("default", "@jupyterlab/filebrowser", false, [1,4,3,3]))
 /******/ 		};
 /******/ 		// no consumes in initial chunks
 /******/ 		var chunkMapping = {
 /******/ 			"lib_index_js": [
-/******/ 				"webpack/sharing/consume/default/@jupyterlab/filebrowser",
-/******/ 				"webpack/sharing/consume/default/@jupyterlab/notebook"
+/******/ 				"webpack/sharing/consume/default/@jupyterlab/filebrowser"
 /******/ 			]
 /******/ 		};
 /******/ 		var startedInstallModules = {};
@@ -451,7 +449,7 @@ __webpack_require__.d(exports, {
 /******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
-/******/ 			"jt-dragdrop-ext": 0
+/******/ 			"jtlab-dragdrop-ext": 0
 /******/ 		};
 /******/ 		
 /******/ 		__webpack_require__.f.j = (chunkId, promises) => {
@@ -528,7 +526,7 @@ __webpack_require__.d(exports, {
 /******/ 		
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkjt_dragdrop_ext"] = self["webpackChunkjt_dragdrop_ext"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkjtlab_dragdrop_ext"] = self["webpackChunkjtlab_dragdrop_ext"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
@@ -543,9 +541,9 @@ __webpack_require__.d(exports, {
 /******/ 	// module cache are used so entry inlining is disabled
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
-/******/ 	var __webpack_exports__ = __webpack_require__("webpack/container/entry/jt-dragdrop-ext");
-/******/ 	(_JUPYTERLAB = typeof _JUPYTERLAB === "undefined" ? {} : _JUPYTERLAB)["jt-dragdrop-ext"] = __webpack_exports__;
+/******/ 	var __webpack_exports__ = __webpack_require__("webpack/container/entry/jtlab-dragdrop-ext");
+/******/ 	(_JUPYTERLAB = typeof _JUPYTERLAB === "undefined" ? {} : _JUPYTERLAB)["jtlab-dragdrop-ext"] = __webpack_exports__;
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=remoteEntry.73fd732ec6df1baa952c.js.map
+//# sourceMappingURL=remoteEntry.93bac3e0a83f086b5b79.js.map

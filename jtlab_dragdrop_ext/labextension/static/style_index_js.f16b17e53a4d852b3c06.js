@@ -1,5 +1,5 @@
 "use strict";
-(self["webpackChunkjt_dragdrop_ext"] = self["webpackChunkjt_dragdrop_ext"] || []).push([["style_index_js"],{
+(self["webpackChunkjtlab_dragdrop_ext"] = self["webpackChunkjtlab_dragdrop_ext"] || []).push([["style_index_js"],{
 
 /***/ "./node_modules/css-loader/dist/runtime/api.js":
 /*!*****************************************************!*\
@@ -486,4 +486,4 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 /***/ })
 
 }]);
-//# sourceMappingURL=style_index_js.0dd3e28a9706b5cb468f.js.map
+//# sourceMappingURL=style_index_js.f16b17e53a4d852b3c06.js.map

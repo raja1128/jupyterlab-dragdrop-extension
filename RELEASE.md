@@ -1,4 +1,4 @@
-# Making a new release of jt_dragdrop_ext
+# Making a new release of jtlab_dragdrop_ext
 
 The extension can be published to `PyPI` and `npm` manually or using the [Jupyter Releaser](https://github.com/jupyter-server/jupyter_releaser).
 

@@ -3,4 +3,4 @@ node_modules
 **/lib
 **/package.json
 !/package.json
-jt_dragdrop_ext
+jtlab_dragdrop_ext

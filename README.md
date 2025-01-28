@@ -1,4 +1,4 @@
-# jt_dragdrop_ext
+# jtlab_dragdrop_ext
 
 [![Github Actions Status](/workflows/Build/badge.svg)](/actions/workflows/build.yml)
 
@@ -13,7 +13,7 @@ A JupyterLab extension.
 To install the extension, execute:
 
 ```bash
-pip install jt_dragdrop_ext
+pip install jtlab_dragdrop_ext
 ```
 
 ## Uninstall
@@ -21,7 +21,7 @@ pip install jt_dragdrop_ext
 To remove the extension, execute:
 
 ```bash
-pip uninstall jt_dragdrop_ext
+pip uninstall jtlab_dragdrop_ext
 ```
 
 ## Contributing
@@ -36,7 +36,7 @@ The `jlpm` command is JupyterLab's pinned version of
 
 ```bash
 # Clone the repo to your local environment
-# Change directory to the jt_dragdrop_ext directory
+# Change directory to the jtlab_dragdrop_ext directory
 # Install package in development mode
 pip install -e "."
 # Link your development version of the extension with JupyterLab
@@ -65,12 +65,12 @@ jupyter lab build --minimize=False
 ### Development uninstall
 
 ```bash
-pip uninstall jt_dragdrop_ext
+pip uninstall jtlab_dragdrop_ext
 ```
 
 In development mode, you will also need to remove the symlink created by `jupyter labextension develop`
 command. To find its location, you can run `jupyter labextension list` to figure out where the `labextensions`
-folder is located. Then you can remove the symlink named `jt-dragdrop-ext` within that folder.
+folder is located. Then you can remove the symlink named `jtlab-dragdrop-ext` within that folder.
 
 ### Packaging the extension
 
