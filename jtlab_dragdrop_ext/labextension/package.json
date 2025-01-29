@@ -7,9 +7,9 @@
     "jupyterlab",
     "jupyterlab-extension"
   ],
-  "homepage": "https://github.com/raja1128/jtlab-dragdrop-ext",
+  "homepage": "https://github.com/raja1128/jupyterlab-dragdrop-extension",
   "bugs": {
-    "url": "https://github.com/raja1128/jtlab-dragdrop-ext/issues"
+    "url": "https://github.com/raja1128/jupyterlab-dragdrop-extension"
   },
   "license": "BSD-3-Clause",
   "author": {
@@ -25,7 +25,7 @@
   "style": "style/index.css",
   "repository": {
     "type": "git",
-    "url": "https://github.com/raja1128/jtlab-dragdrop-ext.git"
+    "url": "https://github.com/raja1128/jupyterlab-dragdrop-extension"
   },
   "scripts": {
     "build": "jlpm build:lib && jlpm build:labextension:dev",
@@ -57,7 +57,8 @@
   "dependencies": {
     "@jupyterlab/application": "^3.6.8",
     "@jupyterlab/filebrowser": "^3.6.8",
-    "@jupyterlab/notebook": "^3.6.8"
+    "@jupyterlab/notebook": "^3.6.8",
+    "@jupyterlab/cells": "^3.6.8"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -98,7 +99,7 @@
     "extension": true,
     "outputDir": "jtlab_dragdrop_ext/labextension",
     "_build": {
-      "load": "static/remoteEntry.e63392099fc942bd0615.js",
+      "load": "static/remoteEntry.a8a1099a94997878872a.js",
       "extension": "./extension",
       "style": "./style"
     }
