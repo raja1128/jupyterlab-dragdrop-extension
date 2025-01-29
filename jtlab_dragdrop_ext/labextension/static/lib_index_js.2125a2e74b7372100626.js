@@ -11,26 +11,33 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _jupyterlab_filebrowser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @jupyterlab/filebrowser */ "webpack/sharing/consume/default/@jupyterlab/filebrowser");
-/* harmony import */ var _jupyterlab_filebrowser__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_jupyterlab_filebrowser__WEBPACK_IMPORTED_MODULE_0__);
-
 /**
  * Initialization data for the disable-drag-and-drop extension.
  */
 const plugin = {
     id: 'jtlab-dragdrop-ext:plugin',
     autoStart: true,
-    requires: [_jupyterlab_filebrowser__WEBPACK_IMPORTED_MODULE_0__.IDefaultFileBrowser],
-    // requires: [IFileBrowserFactory],
-    activate: (app, browser) => {
-        console.log('Disabling drag-and-drop in File Browser.');
-        // Access the file browser widget
-        const fileBrowser = browser;
-        // Add event listeners to disable drag and drop
-        fileBrowser.node.addEventListener('drop', (event) => {
+    activate: (app) => {
+        console.log('Disabling drag-and-drop and external copy/paste.');
+        const shellNode = app.shell.node;
+        shellNode.addEventListener('drop', (event) => {
             console.log('Drop event prevented.');
             event.preventDefault();
             event.stopPropagation();
+        }, true);
+        shellNode.addEventListener('paste', (event) => {
+            if (event.clipboardData) {
+                const types = event.clipboardData.types;
+                const isJupyterClipboard = (types.length == 1 && types.includes('text/plain'));
+                if (!isJupyterClipboard) {
+                    console.log('External paste detected and blocked.');
+                    event.preventDefault();
+                    event.stopPropagation();
+                }
+                else {
+                    return;
+                }
+            }
         }, true);
     }
 };
@@ -40,4 +47,4 @@ const plugin = {
 /***/ })
 
 }]);
-//# sourceMappingURL=lib_index_js.a60d64ee1f125602123f.js.map
+//# sourceMappingURL=lib_index_js.2125a2e74b7372100626.js.map

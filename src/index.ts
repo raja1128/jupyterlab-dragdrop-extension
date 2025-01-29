@@ -1,24 +1,36 @@
 import { JupyterFrontEnd, JupyterFrontEndPlugin } from '@jupyterlab/application';
-import { IDefaultFileBrowser } from '@jupyterlab/filebrowser';
+
 /**
  * Initialization data for the disable-drag-and-drop extension.
  */
 const plugin: JupyterFrontEndPlugin<void> = {
   id: 'jtlab-dragdrop-ext:plugin',
   autoStart: true,
-  requires: [IDefaultFileBrowser],
-  // requires: [IFileBrowserFactory],
-  activate: (app: JupyterFrontEnd, browser: IDefaultFileBrowser) => {
-    console.log('Disabling drag-and-drop in File Browser.');
-    
-    // Access the file browser widget
-    const fileBrowser = browser;
+  activate: (app: JupyterFrontEnd) => {
+    console.log('Disabling drag-and-drop and external copy/paste.');
+    const shellNode = app.shell.node
 
-    // Add event listeners to disable drag and drop
-    fileBrowser.node.addEventListener('drop', (event) => {
+    shellNode.addEventListener('drop', (event: DragEvent) => {
       console.log('Drop event prevented.');
       event.preventDefault();
       event.stopPropagation();
+    }, true);
+
+    shellNode.addEventListener('paste', (event: ClipboardEvent) => {
+
+      if (event.clipboardData) {
+        const types = event.clipboardData.types;
+
+        const isJupyterClipboard = (types.length == 1 && types.includes('text/plain'));
+
+        if (!isJupyterClipboard) {
+          console.log('External paste detected and blocked.');
+          event.preventDefault();
+          event.stopPropagation();
+        } else {
+            return
+        }
+      }
     }, true);
 
   }

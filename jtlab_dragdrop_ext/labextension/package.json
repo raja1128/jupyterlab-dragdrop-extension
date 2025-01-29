@@ -56,7 +56,8 @@
   },
   "dependencies": {
     "@jupyterlab/application": "^4.0.0",
-    "@jupyterlab/filebrowser": "4.3.3"
+    "@jupyterlab/filebrowser": "4.3.3",
+    "@jupyterlab/notebook": "4.3.4"
   },
   "devDependencies": {
     "@jupyterlab/builder": "^4.0.0",
@@ -94,7 +95,7 @@
     "extension": true,
     "outputDir": "jtlab_dragdrop_ext/labextension",
     "_build": {
-      "load": "static/remoteEntry.93bac3e0a83f086b5b79.js",
+      "load": "static/remoteEntry.a058163110ad4ae0cfd1.js",
       "extension": "./extension",
       "style": "./style"
     }
